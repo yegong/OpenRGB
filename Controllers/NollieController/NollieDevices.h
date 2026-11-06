@@ -22,6 +22,7 @@
 #define NOLLIE8_VID                0x16D2
 #define NOLLIE1_VID                0x16D2
 #define NOLLIE28_12_VID            0x16D2
+#define NOLLIE16_V1_2_VID          0x16D2
 
 /*---------------------------------------------------------*\
 | Nollie product IDs                                        |
@@ -30,6 +31,8 @@
 #define NOLLIE16_PID               0x4716
 #define NOLLIE8_PID                0x1F01
 #define NOLLIE1_PID                0x1F11
+#define NOLLIE16_1_V1_2_PID        0x1613
+#define NOLLIE16_2_V1_2_PID        0x1615
 #define NOLLIE28_12_PID            0x1616
 #define NOLLIE28_L1_PID            0x1617
 #define NOLLIE28_L2_PID            0x1618
@@ -54,6 +57,7 @@ typedef struct
     unsigned short              channels;
     unsigned short              leds_per_channel;
     const int*                  channel_index;
+    unsigned short              channel_name_offset;
 } nollie_device;
 
 /*---------------------------------------------------------*\

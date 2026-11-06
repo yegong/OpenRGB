@@ -34,6 +34,8 @@ DetectedControllers DetectNollieControllers(hid_device_info* info, const std::st
 
 REGISTER_HID_DETECTOR("Nollie 32CH", DetectNollieControllers, NOLLIE32_VID, NOLLIE32_PID);
 REGISTER_HID_DETECTOR("Nollie 16CH", DetectNollieControllers, NOLLIE16_VID, NOLLIE16_PID);
+REGISTER_HID_DETECTOR_I("Nollie 16 1.2 (1-8)", DetectNollieControllers, NOLLIE16_V1_2_VID, NOLLIE16_1_V1_2_PID, 2);
+REGISTER_HID_DETECTOR_I("Nollie 16 1.2 (9-16)", DetectNollieControllers, NOLLIE16_V1_2_VID, NOLLIE16_2_V1_2_PID, 2);
 REGISTER_HID_DETECTOR("Nollie 8CH", DetectNollieControllers, NOLLIE8_VID, NOLLIE8_PID);
 REGISTER_HID_DETECTOR("Nollie 1CH", DetectNollieControllers, NOLLIE1_VID, NOLLIE1_PID);
 REGISTER_HID_DETECTOR("Nollie 28 12", DetectNollieControllers, NOLLIE28_12_VID, NOLLIE28_12_PID);

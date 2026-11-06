@@ -28,7 +28,8 @@ static const nollie_device nollie32 =
     NOLLIE32_PID,
     32,
     NOLLIE_HS_CH_LED_NUM,
-    ch32
+    ch32,
+    0
 };
 
 static const nollie_device nollie16 =
@@ -37,7 +38,28 @@ static const nollie_device nollie16 =
     NOLLIE16_PID,
     16,
     NOLLIE_HS_CH_LED_NUM,
-    ch16
+    ch16,
+    0
+};
+
+static const nollie_device nollie16_1_v1_2 =
+{
+    NOLLIE16_V1_2_VID,
+    NOLLIE16_1_V1_2_PID,
+    8,
+    NOLLIE_FS_CH_LED_NUM,
+    dflt,
+    0
+};
+
+static const nollie_device nollie16_2_v1_2 =
+{
+    NOLLIE16_V1_2_VID,
+    NOLLIE16_2_V1_2_PID,
+    8,
+    NOLLIE_FS_CH_LED_NUM,
+    dflt,
+    8
 };
 
 static const nollie_device nollie8 =
@@ -46,7 +68,8 @@ static const nollie_device nollie8 =
     NOLLIE8_PID,
     8,
     126,
-    dflt
+    dflt,
+    0
 };
 
 static const nollie_device nollie1 =
@@ -55,7 +78,8 @@ static const nollie_device nollie1 =
     NOLLIE1_PID,
     1,
     630,
-    dflt
+    dflt,
+    0
 };
 
 static const nollie_device nollie28_12 =
@@ -64,7 +88,8 @@ static const nollie_device nollie28_12 =
     NOLLIE28_12_PID,
     1,
     42,
-    dflt
+    dflt,
+    0
 };
 
 static const nollie_device nollie28_l1 =
@@ -73,7 +98,8 @@ static const nollie_device nollie28_l1 =
     NOLLIE28_L1_PID,
     8,
     NOLLIE_FS_CH_LED_NUM,
-    dflt
+    dflt,
+    0
 };
 
 static const nollie_device nollie28_l2 =
@@ -82,7 +108,8 @@ static const nollie_device nollie28_l2 =
     NOLLIE28_L2_PID,
     8,
     NOLLIE_FS_CH_LED_NUM,
-    dflt
+    dflt,
+    0
 };
 
 static const nollie_device nollie32_os2 =
@@ -91,7 +118,8 @@ static const nollie_device nollie32_os2 =
     NOLLIE32_PID,
     32,
     NOLLIE_HS_CH_LED_NUM,
-    ch32
+    ch32,
+    0
 };
 
 static const nollie_device nollie16_os2 =
@@ -100,7 +128,8 @@ static const nollie_device nollie16_os2 =
     NOLLIE16_PID,
     16,
     NOLLIE_HS_CH_LED_NUM,
-    n16
+    n16,
+    0
 };
 
 static const nollie_device nollie8_os2 =
@@ -109,7 +138,8 @@ static const nollie_device nollie8_os2 =
     NOLLIE8_PID,
     8,
     126,
-    dflt
+    dflt,
+    0
 };
 
 static const nollie_device nollie1_os2 =
@@ -118,7 +148,8 @@ static const nollie_device nollie1_os2 =
     NOLLIE1_PID,
     1,
     630,
-    dflt
+    dflt,
+    0
 };
 
 static const nollie_device nollie32_os2_1 =
@@ -127,7 +158,8 @@ static const nollie_device nollie32_os2_1 =
     NOLLIE32_OS2_1_PID,
     32,
     NOLLIE_HS_CH_LED_NUM,
-    ch32
+    ch32,
+    0
 };
 
 static const nollie_device nollie16_os2_1 =
@@ -136,7 +168,8 @@ static const nollie_device nollie16_os2_1 =
     NOLLIE16_OS2_1_PID,
     16,
     NOLLIE_HS_CH_LED_NUM,
-    n16
+    n16,
+    0
 };
 
 static const nollie_device nollie8_os2_1 =
@@ -145,7 +178,8 @@ static const nollie_device nollie8_os2_1 =
     NOLLIE8_OS2_1_PID,
     8,
     126,
-    dflt
+    dflt,
+    0
 };
 
 static const nollie_device prism8_os2_1 =
@@ -154,7 +188,8 @@ static const nollie_device prism8_os2_1 =
     PRISM8_OS2_1_PID,
     8,
     126,
-    dflt
+    dflt,
+    0
 };
 
 static const nollie_device nollie1_os2_1 =
@@ -163,7 +198,8 @@ static const nollie_device nollie1_os2_1 =
     NOLLIE1_OS2_1_PID,
     1,
     630,
-    dflt
+    dflt,
+    0
 };
 
 /*---------------------------------------------------------*\
@@ -173,6 +209,8 @@ static const nollie_device* device_list[] =
 {
     &nollie32,
     &nollie16,
+    &nollie16_1_v1_2,
+    &nollie16_2_v1_2,
     &nollie8,
     &nollie1,
     &nollie28_12,

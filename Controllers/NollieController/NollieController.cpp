@@ -89,23 +89,24 @@ const int* NollieController::GetChannelIndex()
 
 std::string NollieController::GetChannelName(unsigned short channel)
 {
-    std::string channel_name;
+    std::string     channel_name;
+    unsigned short  channel_number = channel + nollie_device_list[device_index]->channel_name_offset;
 
-    if(channel > 27 )
+    if(channel_number > 27)
     {
-        channel_name = "Channel EXT " + std::to_string(channel + 1 - 28);
+        channel_name = "Channel EXT " + std::to_string(channel_number + 1 - 28);
     }
-    else if(channel > 21 )
+    else if(channel_number > 21)
     {
-        channel_name = "Channel GPU " + std::to_string(channel + 1 - 22);
+        channel_name = "Channel GPU " + std::to_string(channel_number + 1 - 22);
     }
-    else if(channel > 15 )
+    else if(channel_number > 15)
     {
-        channel_name = "Channel ATX " + std::to_string(channel + 1 - 16);
+        channel_name = "Channel ATX " + std::to_string(channel_number + 1 - 16);
     }
     else
     {
-        channel_name = "Channel " + std::to_string(channel + 1);
+        channel_name = "Channel " + std::to_string(channel_number + 1);
     }
 
     return(channel_name);
